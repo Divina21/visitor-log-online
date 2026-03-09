@@ -1,7 +1,5 @@
-import Image from "next/image";
+import VisitorKiosk from '../components/VisitorKiosk';
 
 export default function Home() {
-  return (
-<h1>This is a homepage testing 123.</h1>
-  );
+  return <VisitorKiosk />;
 }
