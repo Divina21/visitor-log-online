@@ -289,11 +289,11 @@ export default function App() {
         {/* VIEW: CHECK-IN */}
         {view === 'checkin' && (
           <div className="mx-auto animate-in" style={{ maxWidth: '800px' }}>
-            <button onClick={() => setView('home')} className="btn btn-link text-decoration-none text-secondary fw-bold mb-4 p-0">
+            <button onClick={() => setView('home')} className="btn btn-link text-decoration-none text-secondary fw-bold mb-4 p-0 d-inline-flex align-items-center gap-1">
               <ChevronLeft size={20} /> Back to Reception
             </button>
             <div className="mb-4">
-              <h2 className="fw-bold">Visitor Check-In</h2>
+              <h2 className="fw-bold text-primary">Visitor Check-In</h2>
               <p className="text-muted">Please fill in your details to register.</p>
             </div>
             
@@ -332,8 +332,8 @@ export default function App() {
                   </div>
                 </div>
                 <div className="col-12 pt-4">
-                  <button type="submit" className="btn btn-primary btn-lg w-100 py-3 fw-bold rounded-4 shadow-sm">
-                    Complete Registration <CheckCircle2 size={20} className="ms-2" />
+                  <button type="submit" className="btn btn-primary btn-lg w-100 py-3 fw-bold rounded-4 shadow-sm d-inline-flex align-items-center justify-content-center gap-2">
+                    Complete Registration <CheckCircle2 size={20} />
                   </button>
                   <p className="text-center text-muted small mt-4">By checking in, you agree to our building's safety and privacy policies.</p>
                 </div>
@@ -345,11 +345,11 @@ export default function App() {
         {/* VIEW: CHECK-OUT */}
         {view === 'checkout' && (
           <div className="mx-auto animate-in" style={{ maxWidth: '900px' }}>
-            <button onClick={() => setView('home')} className="btn btn-link text-decoration-none text-secondary fw-bold mb-4 p-0">
+            <button onClick={() => setView('home')} className="btn btn-link text-decoration-none text-secondary fw-bold mb-4 p-0 d-inline-flex align-items-center gap-1">
               <ChevronLeft size={20} /> Back to Reception
             </button>
             <div className="mb-4">
-              <h2 className="fw-bold">Check Out</h2>
+              <h2 className="fw-bold text-primary">Visitor Check Out</h2>
               <p className="text-muted">Locate your name to signal your departure.</p>
             </div>
 
@@ -441,7 +441,7 @@ export default function App() {
                   <span className="active-pulse"></span>
                   <small className="text-uppercase fw-bold text-muted tracking-widest" style={{ fontSize: '10px' }}>System Live</small>
                 </div>
-                <h2 className="fw-bold display-6 mb-0">Management Dashboard</h2>
+                <h2 className="fw-bold display-6 mb-0 text-primary">Management Dashboard</h2>
                 <p className="text-muted mb-0">Real-time visitor analytics and audit logs.</p>
               </div>
               <div className="d-flex gap-2">
