@@ -1,6 +1,15 @@
+import { useState, useEffect } from 'react';
 import { UserPlus, UserMinus, ArrowRight } from 'lucide-react';
 
 export default function HomeView({ setView, stats }) {
+  const [now, setNow] = useState(null);
+
+  useEffect(() => {
+    setNow(new Date());
+    const timer = setInterval(() => setNow(new Date()), 60_000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="text-center py-5 animate-in">
       <div className="mb-5">
@@ -53,12 +62,12 @@ export default function HomeView({ setView, stats }) {
         </div>
         <div className="col-auto border-start d-none d-md-block"></div>
         <div className="col-auto px-4 text-center">
-          <span className="d-block display-6 fw-bold text-dark">{new Date().toLocaleDateString(undefined, {month: 'short', day: 'numeric'})}</span>
+          <span className="d-block display-6 fw-bold text-dark">{now ? now.toLocaleDateString(undefined, {month: 'short', day: 'numeric'}) : '\u00A0'}</span>
           <small className="text-uppercase fw-bold text-muted tracking-widest" style={{fontSize: '10px'}}>Today</small>
         </div>
         <div className="col-auto border-start d-none d-md-block"></div>
         <div className="col-auto px-4 text-center">
-          <span className="d-block display-6 fw-bold text-dark">{new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+          <span className="d-block display-6 fw-bold text-dark">{now ? now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : '\u00A0'}</span>
           <small className="text-uppercase fw-bold text-muted tracking-widest" style={{fontSize: '10px'}}>Time</small>
         </div>
       </div>
