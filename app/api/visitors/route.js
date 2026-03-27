@@ -16,7 +16,7 @@ export async function GET() {
       id: item.sys.id,
       fullName: item.fields.fullName,
       phoneNumber: item.fields.phoneNumber,
-      purpose: item.fields.Purpose,
+      purpose: item.fields.purpose,
       host: item.fields.host,
       checkInTime: item.fields.checkInTime,
       checkOutTime: item.fields.checkOutTime || null,
